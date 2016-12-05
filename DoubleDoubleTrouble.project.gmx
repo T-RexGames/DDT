@@ -5,11 +5,19 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\SnowTree</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\IceTiles</background>
+  </backgrounds>
   <paths name="paths"/>
-  <objects name="objects"/>
-  <rooms name="rooms"/>
+  <objects name="objects">
+    <object>objects\objSnowTree</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\TheGreatOutDoors</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
