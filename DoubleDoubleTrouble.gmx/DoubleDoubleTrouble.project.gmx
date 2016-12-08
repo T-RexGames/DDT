@@ -6,7 +6,14 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_Player</sprite>
+    <sprite>sprites\spr_Player_Up</sprite>
+    <sprite>sprites\spr_Player_Left</sprite>
+    <sprite>sprites\spr_Player_Right</sprite>
+    <sprite>sprites\spr_Player_Down</sprite>
+    <sprite>sprites\spr_snowman_down</sprite>
+    <sprite>sprites\spr_snowman_up</sprite>
+    <sprite>sprites\spr_snowman_left</sprite>
+    <sprite>sprites\spr_snowman_right</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -23,6 +30,7 @@
   <objects name="objects">
     <object>objects\Level</object>
     <object>objects\obj_Player</object>
+    <object>objects\obj_snowman</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level</room>

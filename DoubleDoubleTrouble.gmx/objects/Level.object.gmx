@@ -35,10 +35,10 @@ var width = room_width div CELL_WIDTH;
 var height = room_height div CELL_HEIGHT;
 
 // Create the grid
-grid = ds_grid_create(width, height);
+global.grid = ds_grid_create(width, height);
 
 // Fill the grid with the void
-ds_grid_set_region(grid, 0, 0, width-1, height-1, VOID);
+ds_grid_set_region(global.grid, 0, 0, width-1, height-1, VOID);
 
 // Randomize the world
 randomize();
@@ -49,6 +49,10 @@ var cy = height div 2;
 // Create the player
 instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_Player);
 
+// Create the snowmen
+
+instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_snowman); 
+
 // Give the controller a random direction
 var cdir = irandom(3);
 
@@ -58,7 +62,7 @@ var odds = 1;
 // Create the level using 1000 steps
 repeat (1000) {
     // Place a floor tile at the controller position
-    grid[# cx, cy] = FLOOR;
+    global.grid[# cx, cy] = FLOOR;
     
     // Randomize the direction of the controller
     if (irandom(odds) == odds) {
@@ -79,12 +83,12 @@ repeat (1000) {
 // Add the walls
 for (var yy = 1; yy &lt; height-1; yy++) {
     for (var xx = 1; xx &lt; width-1; xx++) {
-        if (grid[# xx, yy] == FLOOR) {
+        if (global.grid[# xx, yy] == FLOOR) {
             // Check for walls
-            if (grid[# xx+1, yy] != FLOOR) grid[# xx+1, yy] = WALL;
-            if (grid[# xx-1, yy] != FLOOR) grid[# xx-1, yy] = WALL;
-            if (grid[# xx, yy+1] != FLOOR) grid[# xx, yy+1] = WALL;
-            if (grid[# xx, yy-1] != FLOOR) grid[# xx, yy-1] = WALL;
+            if (global.grid[# xx+1, yy] != FLOOR) global.grid[# xx+1, yy] = WALL;
+            if (global.grid[# xx-1, yy] != FLOOR) global.grid[# xx-1, yy] = WALL;
+            if (global.grid[# xx, yy+1] != FLOOR) global.grid[# xx, yy+1] = WALL;
+            if (global.grid[# xx, yy-1] != FLOOR) global.grid[# xx, yy-1] = WALL;
         }
     }
 }
@@ -92,7 +96,7 @@ for (var yy = 1; yy &lt; height-1; yy++) {
 // Draw the level using the grid
 for (var yy = 0; yy &lt; height; yy++) {
     for (var xx = 0; xx &lt; width; xx++) {
-        if (grid[# xx, yy] == FLOOR) {
+        if (global.grid[# xx, yy] == FLOOR) {
             // Draw the floor
             tile_add(bg_floor, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0)
         }
