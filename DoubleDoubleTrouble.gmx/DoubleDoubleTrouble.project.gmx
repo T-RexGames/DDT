@@ -24,6 +24,9 @@
       <sprite>sprites\spr_snowman_left</sprite>
       <sprite>sprites\spr_snowman_right</sprite>
     </sprites>
+    <sprite>sprites\sprite12</sprite>
+    <sprite>sprites\spr_snow</sprite>
+    <sprite>sprites\spr_snow_hitground</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -32,6 +35,8 @@
     <background>background\bg_TwoTrees</background>
     <background>background\bg_SingleTree</background>
     <background>background\bg_gameover</background>
+    <background>background\bg_Tims</background>
+    <background>background\bg_Cabin</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
