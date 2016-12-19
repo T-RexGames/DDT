@@ -50,8 +50,9 @@ randomize();
 var cx = width div 2;
 var cy = height div 2;
 // Create the player
-instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_Player);
+instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_Player); 
 
+//create the healthbar
 
 
   
@@ -104,6 +105,13 @@ for (var yy = 0; yy &lt; height; yy++) {
             // Draw the floor
             tile_add(bg_floor, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0)
            
+            //add some snowmen
+            var odds = 10;
+            var ex = xx*CELL_WIDTH+CELL_WIDTH/2;
+            var ey = yy*CELL_HEIGHT+CELL_HEIGHT/2;
+            if(point_distance(ex, ey, obj_Player.x, obj_Player.y) &gt; 80 &amp;&amp; irandom(odds)==odds){
+            instance_create(ex, ey, obj_snowman);
+            }
         }
         else {
         mp_grid_add_cell(grid_path, xx, yy);
@@ -111,17 +119,7 @@ for (var yy = 0; yy &lt; height; yy++) {
         }
     }
 }
-//create the snowmen
-for (var yy = 0; yy &lt; height; yy++) {
-    for (var xx = 0; xx &lt; width; xx++) {
-        if (grid[# xx, yy] == FLOOR) {
-            // Draw the floor
-            
-            instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2 ,obj_snowman);
-           
-        }
-    }
-}
+
 
 
 
@@ -156,8 +154,8 @@ for (var yy = 0; yy &lt; height; yy++) {
           <argument>
             <kind>1</kind>
             <string>/// destroy the grids
-ds_grid_destroy(grid);
-mp_grid_destroy(path);
+ds_grid_destroy(Level.grid);
+//mp_grid_destroy(Level.path);
 </string>
           </argument>
         </arguments>

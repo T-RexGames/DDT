@@ -6,14 +6,24 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_Player_Up</sprite>
-    <sprite>sprites\spr_Player_Left</sprite>
-    <sprite>sprites\spr_Player_Right</sprite>
-    <sprite>sprites\spr_Player_Down</sprite>
-    <sprite>sprites\spr_snowman_down</sprite>
-    <sprite>sprites\spr_snowman_up</sprite>
-    <sprite>sprites\spr_snowman_left</sprite>
-    <sprite>sprites\spr_snowman_right</sprite>
+    <sprite>sprites\spr_puck</sprite>
+    <sprites name="Healthbar">
+      <sprite>sprites\spr_healthbar_border</sprite>
+      <sprite>sprites\spr_healthbar_inner</sprite>
+      <sprite>sprites\spr_healthbar_bg</sprite>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\spr_Player_Up</sprite>
+      <sprite>sprites\spr_Player_Left</sprite>
+      <sprite>sprites\spr_Player_Down</sprite>
+      <sprite>sprites\spr_Player_Right</sprite>
+    </sprites>
+    <sprites name="Snowman">
+      <sprite>sprites\spr_snowman_down</sprite>
+      <sprite>sprites\spr_snowman_up</sprite>
+      <sprite>sprites\spr_snowman_left</sprite>
+      <sprite>sprites\spr_snowman_right</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -21,6 +31,7 @@
     <background>background\bg_walltiles</background>
     <background>background\bg_TwoTrees</background>
     <background>background\bg_SingleTree</background>
+    <background>background\bg_gameover</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -32,9 +43,12 @@
     <object>objects\Level</object>
     <object>objects\obj_Player</object>
     <object>objects\obj_snowman</object>
+    <object>objects\obj_puck</object>
+    <object>objects\obj_healthbar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level</room>
+    <room>rooms\rm_gameover</room>
   </rooms>
   <constants number="5">
     <constant name="VOID">-7</constant>
