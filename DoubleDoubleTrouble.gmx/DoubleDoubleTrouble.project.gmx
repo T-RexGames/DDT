@@ -24,6 +24,8 @@
       <sprite>sprites\spr_snowman_left</sprite>
       <sprite>sprites\spr_snowman_right</sprite>
     </sprites>
+    <sprite>sprites\spr_snow</sprite>
+    <sprite>sprites\spr_snow_hitground</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -47,6 +49,8 @@
     <object>objects\obj_snowman</object>
     <object>objects\obj_puck</object>
     <object>objects\obj_healthbar</object>
+    <object>objects\object5</object>
+    <object>objects\obj_snow</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level</room>
