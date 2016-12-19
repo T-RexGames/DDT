@@ -32,6 +32,8 @@
     <background>background\bg_TwoTrees</background>
     <background>background\bg_SingleTree</background>
     <background>background\bg_gameover</background>
+    <background>background\bg_Cabin</background>
+    <background>background\bg_Tims</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
