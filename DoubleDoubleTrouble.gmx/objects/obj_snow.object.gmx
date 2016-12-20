@@ -60,6 +60,47 @@ if (height &lt;= 0){
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// reference: https://www.youtube.com/watch?v=66f6bI2uIdQ
+
+draw_set_color(c_gray);
+draw_set_alpha(.6)
+
+var length;
+var vectorX, vectorY;
+
+vectorX = (x - (view_xview + view_wview/2))/(view_wview/2);
+vectorY = (y - (view_yview + view_hview/2))/(view_hview/2);
+length = 2;
+
+draw_line_width(x + vectorX*sqr(height),        y + vectorY * sqr(height),
+                x + vectorX*sqr(height+length), y + vectorY * sqr(height+length),2);
+
+//draw_self();  
+                
+                                
+draw_set_alpha(1);     
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
