@@ -49,7 +49,6 @@
     <object>objects\obj_snowman</object>
     <object>objects\obj_puck</object>
     <object>objects\obj_healthbar</object>
-    <object>objects\object5</object>
     <object>objects\obj_snow</object>
   </objects>
   <rooms name="rooms">
