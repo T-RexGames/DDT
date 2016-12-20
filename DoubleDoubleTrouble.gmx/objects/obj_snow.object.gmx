@@ -3,7 +3,7 @@
   <spriteName>spr_snow</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>//set height
 height = 40;
+draw_set_alpha(.4);
+image_xscale = .3;
+image_yscale = .3;
 </string>
           </argument>
         </arguments>
@@ -53,7 +56,7 @@ height = 40;
 
 if (height &lt;= 0){
     instance_destroy();
-    instance_create(x,y, obj_snow_hitground);
+   // instance_create(x,y, obj_snow_hitground);
 }
 </string>
           </argument>
@@ -80,8 +83,8 @@ if (height &lt;= 0){
             <string>// reference: https://www.youtube.com/watch?v=66f6bI2uIdQ
 
 draw_set_color(c_gray);
-draw_set_alpha(.6)
-
+draw_set_alpha(.4)
+/*
 var length;
 var vectorX, vectorY;
 
@@ -91,8 +94,10 @@ length = 2;
 
 draw_line_width(x + vectorX*sqr(height),        y + vectorY * sqr(height),
                 x + vectorX*sqr(height+length), y + vectorY * sqr(height+length),2);
-
-//draw_self();  
+*/
+draw_self();  
+image_xscale -= image_xscale*.05;
+image_yscale -= image_yscale*.05;
                 
                                 
 draw_set_alpha(1);     

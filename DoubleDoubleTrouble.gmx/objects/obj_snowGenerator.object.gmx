@@ -28,7 +28,7 @@
             <string>///Generate Snow
 var edge = 200
 
-repeat(40){
+repeat(10){
 instance_create(view_xview - edge + random(view_wview + edge *2),
                 view_yview - edge + random(view_hview + edge *2),
                 obj_snow);
