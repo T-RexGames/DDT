@@ -51,6 +51,7 @@
     <object>objects\obj_healthbar</object>
     <object>objects\obj_snow</object>
     <object>objects\obj_snowGenerator</object>
+    <object>objects\obj_snow_hitground</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level</room>
