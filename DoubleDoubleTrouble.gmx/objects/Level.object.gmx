@@ -129,13 +129,19 @@ for (var yy = 0; yy &lt; height; yy++) {
             tile_add(bg_floor, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0)
            
             //add some snowmen
-            var odds = 10;
+            var odds = 40;
             var ex = xx*CELL_WIDTH+CELL_WIDTH/2;
             var ey = yy*CELL_HEIGHT+CELL_HEIGHT/2;
             if(point_distance(ex, ey, obj_Player.x, obj_Player.y) &gt; 80 &amp;&amp; irandom(odds)==odds){
             instance_create(ex, ey, obj_snowman);
             }
+         var odds2 = 10;
+         if(irandom(odds2)==odds2){
+         //tile_add(obj_ice, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0);
+         instance_create(xx*CELL_WIDTH, yy*CELL_HEIGHT, obj_ice);
+         }
         }
+           
         else {
         mp_grid_add_cell(grid_path, xx, yy);
         

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//set height
 height = 40;
-draw_set_alpha(.4);
+draw_set_alpha(.2);
 image_xscale = .3;
 image_yscale = .3;
 </string>
@@ -82,8 +82,6 @@ if (height &lt;= 0){
             <kind>1</kind>
             <string>// reference: https://www.youtube.com/watch?v=66f6bI2uIdQ
 
-draw_set_color(c_gray);
-draw_set_alpha(.4)
 /*
 var length;
 var vectorX, vectorY;
