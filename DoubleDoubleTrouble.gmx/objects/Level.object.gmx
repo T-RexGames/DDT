@@ -29,8 +29,8 @@
 var xTemp = 0;
 var yTemp = 0;
 // Resize the room
-room_width = (CELL_WIDTH/16) * 720;
-room_height = (CELL_HEIGHT/16) * 720;
+//room_width = (CELL_WIDTH/16) * 720;
+//room_height = (CELL_HEIGHT/16) * 720;
 
 // Set the grid width and height
 var width = room_width div CELL_WIDTH;

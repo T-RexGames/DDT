@@ -27,8 +27,7 @@
             <kind>1</kind>
             <string>
 room_goto(rm_level);
-room_set_height(1, 640);
-room_set_width(1, 640);
+
 </string>
           </argument>
         </arguments>
@@ -46,5 +45,8 @@ room_set_width(1, 640);
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>60,15</point>
+    <point>200,200</point>
+  </PhysicsShapePoints>
 </object>
