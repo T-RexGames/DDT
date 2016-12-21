@@ -67,6 +67,10 @@ sprite_index = spr_Player_Down;
 }
 move(hspd, vspd);
 
+if(Level.grid[# x, y] == ICE){
+global.spd = 20;
+}
+
 /*if (tile_exists(bg_ice)){
 spd = 10;
 }

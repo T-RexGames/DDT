@@ -78,8 +78,11 @@ var west = 3;
 repeat (2500) {
     // Place a floor tile at the controller position
     grid[# cx, cy] = FLOOR;
-   
     
+    if(irandom(20)==2){
+     grid[# cx, cy] = ICE;
+    }
+ 
     // Randomize the direction of the controller
     
      if (reachedNorth) { north = choose(1,2,3)}
@@ -111,12 +114,12 @@ repeat (2500) {
 // Add the walls
 for (var yy = 1; yy &lt; height-1; yy++) {
     for (var xx = 1; xx &lt; width-1; xx++) {
-        if (grid[# xx, yy] == FLOOR) {
+        if (grid[# xx, yy] == FLOOR || grid[# xx, yy] == ICE) {
             // Check for walls
-            if (grid[# xx+1, yy] != FLOOR) grid[# xx+1, yy] = WALL;
-            if (grid[# xx-1, yy] != FLOOR) grid[# xx-1, yy] = WALL;
-            if (grid[# xx, yy+1] != FLOOR) grid[# xx, yy+1] = WALL;
-            if (grid[# xx, yy-1] != FLOOR) grid[# xx, yy-1] = WALL;
+            if (grid[# xx+1, yy] != FLOOR &amp;&amp; grid[# xx+1, yy] != ICE) grid[# xx+1, yy] = WALL;
+            if (grid[# xx-1, yy] != FLOOR &amp;&amp; grid[# xx-1, yy] != ICE) grid[# xx-1, yy] = WALL;
+            if (grid[# xx, yy+1] != FLOOR &amp;&amp; grid[# xx, yy+1] != ICE) grid[# xx, yy+1] = WALL;
+            if (grid[# xx, yy-1] != FLOOR &amp;&amp; grid[# xx, yy-1] != ICE) grid[# xx, yy-1] = WALL;
         }
     }
 }
@@ -124,28 +127,26 @@ for (var yy = 1; yy &lt; height-1; yy++) {
 // Draw the floor tiles
 for (var yy = 0; yy &lt; height; yy++) {
     for (var xx = 0; xx &lt; width; xx++) {
-        if (grid[# xx, yy] == FLOOR) {
+             if (grid[# xx, yy] == FLOOR) {
             // Draw the floor
-            tile_add(bg_floor, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0)
-           
+            tile_add(bg_floor, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0);
             //add some snowmen
             var odds = 40;
             var ex = xx*CELL_WIDTH+CELL_WIDTH/2;
             var ey = yy*CELL_HEIGHT+CELL_HEIGHT/2;
             if(point_distance(ex, ey, obj_Player.x, obj_Player.y) &gt; 80 &amp;&amp; irandom(odds)==odds){
-            instance_create(ex, ey, obj_snowman);
+                instance_create(ex, ey, obj_snowman);
             }
-         var odds2 = 10;
-         if(irandom(odds2)==odds2){
-         //tile_add(obj_ice, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0);
-         instance_create(xx*CELL_WIDTH, yy*CELL_HEIGHT, obj_ice);
-         }
         }
+        else if(grid[# xx, yy] == ICE){
+        show_debug_message("ICE");
+            tile_add(bg_ice, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, -5);
            
-        else {
+        }
+      else {
         mp_grid_add_cell(grid_path, xx, yy);
         
-        }
+      }
     }
 }
 

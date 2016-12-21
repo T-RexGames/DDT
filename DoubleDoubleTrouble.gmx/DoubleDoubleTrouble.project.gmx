@@ -27,6 +27,7 @@
     <sprite>sprites\spr_snow</sprite>
     <sprite>sprites\spr_snow_hitground</sprite>
     <sprite>sprites\spr_ice</sprite>
+    <sprite>sprites\spr_play</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -38,6 +39,7 @@
     <background>background\bg_Cabin</background>
     <background>background\bg_Tims</background>
     <background>background\bg_ice</background>
+    <background>background\bg_start_screen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -54,8 +56,10 @@
     <object>objects\obj_snow</object>
     <object>objects\obj_snowGenerator</object>
     <object>objects\obj_ice</object>
+    <object>objects\obj_play</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start_screen</room>
     <room>rooms\rm_level</room>
     <room>rooms\rm_gameover</room>
   </rooms>
@@ -65,7 +69,7 @@
     <constant name="FLOOR">-5</constant>
     <constant name="CELL_WIDTH">32</constant>
     <constant name="CELL_HEIGHT">32</constant>
-    <constant name="ICE">-5</constant>
+    <constant name="ICE">-8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
