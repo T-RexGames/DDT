@@ -41,11 +41,9 @@
     <script>scripts\get_path_to_player.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\Level</object>
     <object>objects\obj_Player</object>
     <object>objects\obj_snowman</object>
     <object>objects\obj_puck</object>
-    <object>objects\obj_healthbar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level</room>
