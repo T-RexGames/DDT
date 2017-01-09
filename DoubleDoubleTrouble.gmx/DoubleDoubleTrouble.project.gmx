@@ -28,6 +28,12 @@
     <sprite>sprites\spr_snow_hitground</sprite>
     <sprite>sprites\spr_ice</sprite>
     <sprite>sprites\spr_play</sprite>
+    <sprite>sprites\spr_snowFlake1</sprite>
+    <sprite>sprites\spr_snowFlake2</sprite>
+    <sprite>sprites\spr_snowFlake3</sprite>
+    <sprite>sprites\spr_snowFlake4</sprite>
+    <sprite>sprites\spr_snowFlake5</sprite>
+    <sprite>sprites\spr_snowFlake6</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -57,6 +63,7 @@
     <object>objects\obj_snowGenerator</object>
     <object>objects\obj_ice</object>
     <object>objects\obj_play</object>
+    <object>objects\obj_snowflake1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>
