@@ -24,7 +24,10 @@
       <sprite>sprites\spr_snowman_left</sprite>
       <sprite>sprites\spr_snowman_right</sprite>
     </sprites>
-    <sprite>sprites\sprite12</sprite>
+    <sprite>sprites\spr_snow</sprite>
+    <sprite>sprites\spr_snow_hitground</sprite>
+    <sprite>sprites\spr_ice</sprite>
+    <sprite>sprites\spr_play</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -33,6 +36,10 @@
     <background>background\bg_TwoTrees</background>
     <background>background\bg_SingleTree</background>
     <background>background\bg_gameover</background>
+    <background>background\bg_Cabin</background>
+    <background>background\bg_Tims</background>
+    <background>background\bg_ice</background>
+    <background>background\bg_start_screen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -46,18 +53,23 @@
     <object>objects\obj_snowman</object>
     <object>objects\obj_puck</object>
     <object>objects\obj_healthbar</object>
+    <object>objects\obj_snow</object>
+    <object>objects\obj_snowGenerator</object>
+    <object>objects\obj_ice</object>
+    <object>objects\obj_play</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start_screen</room>
     <room>rooms\rm_level</room>
     <room>rooms\rm_gameover</room>
-    <room>rooms\rm_Start</room>
   </rooms>
-  <constants number="5">
+  <constants number="6">
     <constant name="VOID">-7</constant>
     <constant name="WALL">-6</constant>
     <constant name="FLOOR">-5</constant>
     <constant name="CELL_WIDTH">32</constant>
     <constant name="CELL_HEIGHT">32</constant>
+    <constant name="ICE">-8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

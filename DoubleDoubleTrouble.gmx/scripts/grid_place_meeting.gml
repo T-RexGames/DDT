@@ -12,14 +12,14 @@ x = xx;
 y = yy;
 
 //Check for a x meeting
-var x_meeting  = (Level.grid[# bbox_right div CELL_WIDTH, bbox_top div CELL_HEIGHT] != FLOOR   ) || 
-                 (Level.grid[# bbox_left  div CELL_WIDTH, bbox_top div CELL_HEIGHT] != FLOOR) ;
+var x_meeting  = (Level.grid[# bbox_right div CELL_WIDTH, bbox_top div CELL_HEIGHT] != FLOOR && Level.grid[# bbox_right div CELL_WIDTH, bbox_top div CELL_HEIGHT] != ICE ) ||
+                 (Level.grid[# bbox_left  div CELL_WIDTH, bbox_top div CELL_HEIGHT] != FLOOR && Level.grid[# bbox_left  div CELL_WIDTH, bbox_top div CELL_HEIGHT] != ICE) ;
 
 //Check for a y meeting
-var y_meeting  = (Level.grid[# bbox_right div CELL_WIDTH, bbox_bottom div CELL_HEIGHT] != FLOOR   ) || 
-                 (Level.grid[# bbox_left  div CELL_WIDTH, bbox_bottom div CELL_HEIGHT] != FLOOR) ;
+var y_meeting  = (Level.grid[# bbox_right div CELL_WIDTH, bbox_bottom div CELL_HEIGHT] != FLOOR && Level.grid[# bbox_right div CELL_WIDTH, bbox_bottom div CELL_HEIGHT] != ICE) ||
+                 (Level.grid[# bbox_left  div CELL_WIDTH, bbox_bottom div CELL_HEIGHT] != FLOOR && Level.grid[# bbox_left  div CELL_WIDTH, bbox_bottom div CELL_HEIGHT] != ICE) ;
                  
-var center_meeting = Level.grid[# xx div CELL_WIDTH, yy div CELL_HEIGHT] != FLOOR;
+var center_meeting = Level.grid[# xx div CELL_WIDTH, yy div CELL_HEIGHT] != FLOOR && Level.grid[# xx div CELL_WIDTH, yy div CELL_HEIGHT] != ICE;
 //move to original position
 x = xp;
 y = yp;
