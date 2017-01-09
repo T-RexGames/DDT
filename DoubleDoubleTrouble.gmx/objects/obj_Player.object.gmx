@@ -126,7 +126,8 @@ var vspd = (keyboard_check(vk_down) - keyboard_check(vk_up))* global.spd  ;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.hp--;
+            <string>
+global.hp--;
 </string>
           </argument>
         </arguments>
