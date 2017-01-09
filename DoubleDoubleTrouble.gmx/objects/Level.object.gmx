@@ -180,8 +180,7 @@ for (var yy = 0; yy &lt; height; yy++) {
 //Place features here.
 
 
-//// Create the player
-instance_create(room_width/2  , room_height/2, obj_Player);
+
 
 
 //Place Cabin 
