@@ -13,7 +13,6 @@ if (grid_place_meeting(x+hspd,y)){
 //move horizontaly.
 x += hspd;
 
-
 //Vertical collisions
 if (grid_place_meeting(x,y+vspd)){
     while (!grid_place_meeting(x, y+sign(vspd))){
@@ -24,3 +23,5 @@ if (grid_place_meeting(x,y+vspd)){
 
 //Move vertically.
 y += vspd;
+
+

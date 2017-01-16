@@ -29,8 +29,8 @@
 var xTemp = 0;
 var yTemp = 0;
 // Resize the room
-//room_width = (CELL_WIDTH/16) * 720;
-//room_height = (CELL_HEIGHT/16) * 720;
+room_width = (CELL_WIDTH/16) * 1000;
+room_height = (CELL_HEIGHT/16) * 1000;
 
 // Set the grid width and height
 var width = room_width div CELL_WIDTH;
@@ -51,13 +51,12 @@ randomize();
 // Create the controller in the center of the grid
 var cx = width div 2;
 var cy = height div 2;
-// Create the player
-instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_Player); 
+
 
 //create the healthbar
 
 
-  
+
 
 // Give the controller a random direction
 var cdir = irandom(3);
@@ -124,22 +123,40 @@ for (var yy = 1; yy &lt; height-1; yy++) {
     }
 }
 
+var cabinPlaced = false;
+var timPlaced = false;
+
+
 // Draw the floor tiles
 for (var yy = 0; yy &lt; height; yy++) {
     for (var xx = 0; xx &lt; width; xx++) {
-             if (grid[# xx, yy] == FLOOR) {
+        if (grid[# xx, yy] == FLOOR) {
             // Draw the floor
             tile_add(bg_floor, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0);
-            //add some snowmen
-            var odds = 40;
-            var ex = xx*CELL_WIDTH+CELL_WIDTH/2;
-            var ey = yy*CELL_HEIGHT+CELL_HEIGHT/2;
-            if(point_distance(ex, ey, obj_Player.x, obj_Player.y) &gt; 80 &amp;&amp; irandom(odds)==odds){
-                instance_create(ex, ey, obj_snowman);
+
+            //Place Cabin 
+            if (!cabinPlaced){
+                if (irandom(20) == 1) {
+                    tile_add(bg_Cabin, 0, 0, CELL_WIDTH*2, CELL_HEIGHT*2, xx*CELL_WIDTH, yy*CELL_HEIGHT, -10);
+                    instance_create(xx*CELL_WIDTH+15, yy*CELL_HEIGHT+15, obj_Player); 
+                    cabinPlaced = true;
+                 }
             }
-        }
+            
+            if(cabinPlaced &amp;&amp; !timPlaced){
+                if( 
+                     (point_distance(obj_Player.x, obj_Player.y, xx*CELL_WIDTH, yy*CELL_HEIGHT) &gt; 1500)
+                     &amp;&amp;
+                     ((yy*CELL_HEIGHT - obj_Player.y) &gt; 800)
+                   ){
+                    tile_add(bg_Tims, 0, 0, CELL_WIDTH*2, CELL_HEIGHT*2, xx*CELL_WIDTH, yy*CELL_HEIGHT, -10);
+                    timPlaced = true;
+                }
+            }
+        
+          }
         else if(grid[# xx, yy] == ICE){
-        show_debug_message("ICE");
+        //show_debug_message("ICE");
             tile_add(bg_ice, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, -5);
            
         }
@@ -167,11 +184,12 @@ for (var yy = 0; yy &lt; height; yy++) {
 for (var yy = 0; yy &lt; height; yy++) {
     for (var xx = 0; xx &lt; width; xx++) {
         if ((grid[# xx, yy] != WALL) &amp;&amp; (grid[# xx, yy] != FLOOR)) {
-            // Draw the floor
-           // if (irandom(odds) == odds) {
-                //tile_add(bg_TwoTrees, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0)
-                 tile_add(bg_floor, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0)
-          //  }
+             //Draw the floor
+                tile_add(bg_floor, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0)
+                tile_add(bg_TwoTrees, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, 0)
+                  //if (irandom(odds) == odds) {
+               
+            //}
         }
     }
 }
@@ -180,25 +198,37 @@ for (var yy = 0; yy &lt; height; yy++) {
 //Place features here.
 
 
+instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_moose);
 
 
 
-//Place Cabin 
-var nbrTries =0;
-do {
-     xTemp = random(xx*room_width/3);
-     yTemp =   random(yy*room_height/3);
-     nbrTries++;
-     if  (nbrTries &gt; 100){
-        break;
-     }
-} until (grid[# xTemp, yTemp] == FLOOR)
-tile_add(bg_Cabin, 0, 0, 64, 64, xTemp/64, yTemp/64 , -10)
+
+
+//instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_Player); 
+
+
+//Place Snowmen.
+for (var yy = 0; yy &lt; height; yy++) {
+    for (var xx = 0; xx &lt; width; xx++) {
+        if ((grid[# xx, yy] != WALL) &amp;&amp; (grid[# xx, yy] == FLOOR)) {
+            //add some snowmen
+            var odds = 40;
+            var ex = xx*CELL_WIDTH+CELL_WIDTH/2;
+            var ey = yy*CELL_HEIGHT+CELL_HEIGHT/2;
+            if(point_distance(ex, ey, obj_Player.x, obj_Player.y) &gt; 80 &amp;&amp; irandom(odds)==odds){
+                instance_create(ex, ey, obj_snowman);
+            }
+        }
+    }
+}
+
+
 
 
 
  
 //Place Tim Hortons.
+ /*
 nbrTries = 0;
 do {
       xTemp = irandom_range((xx*CELL_WIDTH) - ((xx*CELL_WIDTH)/3), (xx*CELL_WIDTH));
@@ -210,7 +240,7 @@ do {
 } until (grid[# xTemp, yTemp] == FLOOR)
 tile_add(bg_Tims, 0, 0, 128, 128, xTemp -128, yTemp -128 , -10)
 
-
+*/
 
 
 

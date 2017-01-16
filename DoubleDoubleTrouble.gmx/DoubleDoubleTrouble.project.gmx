@@ -34,6 +34,10 @@
     <sprite>sprites\spr_snowFlake4</sprite>
     <sprite>sprites\spr_snowFlake5</sprite>
     <sprite>sprites\spr_snowFlake6</sprite>
+    <sprite>sprites\sprite22</sprite>
+    <sprites name="Moose">
+      <sprite>sprites\spr_moose</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -64,6 +68,7 @@
     <object>objects\obj_ice</object>
     <object>objects\obj_play</object>
     <object>objects\obj_snowflake1</object>
+    <object>objects\obj_moose</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>

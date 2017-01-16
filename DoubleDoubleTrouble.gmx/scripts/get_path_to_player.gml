@@ -5,7 +5,10 @@ var yy = (obj_Player.y div CELL_HEIGHT)*CELL_HEIGHT+CELL_HEIGHT/2;
 
 if(mp_grid_path(Level.grid_path, path, x, y, xx, yy, true)) {
 
-path_start(path, 2, path_action_stop, false);
+//if(distance_to_object(obj_Player) < view_hview/2 + 20){
+path_start(path, 3, path_action_stop, false);
+//}
+
 }
 
 }

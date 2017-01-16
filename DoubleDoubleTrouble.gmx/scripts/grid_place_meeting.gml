@@ -25,4 +25,9 @@ x = xp;
 y = yp;
 
 //return if the player can move into the new tile.
-return x_meeting || y_meeting || center_meeting;
+if (global.canmoveanywhere == true){
+    return false;
+} else{
+    return x_meeting || y_meeting || center_meeting;
+}
+
