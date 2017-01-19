@@ -34,10 +34,10 @@
     <sprite>sprites\spr_snowFlake4</sprite>
     <sprite>sprites\spr_snowFlake5</sprite>
     <sprite>sprites\spr_snowFlake6</sprite>
-    <sprite>sprites\sprite22</sprite>
     <sprites name="Moose">
       <sprite>sprites\spr_moose</sprite>
     </sprites>
+    <sprite>sprites\spr_Score</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -69,13 +69,16 @@
     <object>objects\obj_play</object>
     <object>objects\obj_snowflake1</object>
     <object>objects\obj_moose</object>
+    <object>objects\obj_Score</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>
     <room>rooms\rm_level</room>
     <room>rooms\rm_gameover</room>
   </rooms>
-  <constants number="6">
+  <constants number="8">
+    <constant name="MOOSE_SPEED">7</constant>
+    <constant name="PLAYER_SPEED">5</constant>
     <constant name="VOID">-7</constant>
     <constant name="WALL">-6</constant>
     <constant name="FLOOR">-5</constant>

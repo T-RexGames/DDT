@@ -198,7 +198,7 @@ for (var yy = 0; yy &lt; height; yy++) {
 //Place features here.
 
 
-instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_moose);
+
 
 
 
@@ -206,16 +206,23 @@ instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_mo
 
 //instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_Player); 
 
-
+var mooseplaced = false;
 //Place Snowmen.
 for (var yy = 0; yy &lt; height; yy++) {
     for (var xx = 0; xx &lt; width; xx++) {
         if ((grid[# xx, yy] != WALL) &amp;&amp; (grid[# xx, yy] == FLOOR)) {
+       
             //add some snowmen
             var odds = 40;
             var ex = xx*CELL_WIDTH+CELL_WIDTH/2;
             var ey = yy*CELL_HEIGHT+CELL_HEIGHT/2;
+            
+       
             if(point_distance(ex, ey, obj_Player.x, obj_Player.y) &gt; 80 &amp;&amp; irandom(odds)==odds){
+                     if(!mooseplaced){
+                     instance_create(ex, ey, obj_moose);
+                        mooseplaced = true;
+        }
                 instance_create(ex, ey, obj_snowman);
             }
         }

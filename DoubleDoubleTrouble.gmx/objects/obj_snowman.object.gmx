@@ -53,9 +53,9 @@ alarm[0] = room_speed;
           <argument>
             <kind>1</kind>
             <string>/// move towards the player
-//if(distance_to_object(obj_Player) &lt; view_xview[0] + 20){
+if(distance_to_object(obj_Player) &lt; view_xview[0] + 20){
 get_path_to_player();
-//}
+}
 alarm[0] = room_speed;
 
 </string>
