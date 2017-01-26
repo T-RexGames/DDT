@@ -7,6 +7,8 @@
   <sounds name="sound">
     <sound>sound\main_screen_music</sound>
     <sound>sound\walking</sound>
+    <sound>sound\wind_sound</sound>
+    <sound>sound\game_over</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_puck</sprite>
@@ -81,8 +83,9 @@
     <object>objects\obj_timer</object>
     <object>objects\obj_tims</object>
     <object>objects\obj_cabin</object>
-    <object>objects\GameWon</object>
     <object>objects\obj_start_music</object>
+    <object>objects\obj_wind</object>
+    <object>objects\obj_sound_game_over</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>

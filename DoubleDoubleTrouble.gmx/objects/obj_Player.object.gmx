@@ -104,7 +104,7 @@ else
 {
 global.spd = 5;
 }
-if((vspd || hspd &gt; 0) || (vspd || hspd &lt; 0))
+/*if((vspd || hspd &gt; 0) || (vspd || hspd &lt; 0))
 {
 if(!audio_is_playing(walking)){
 audio_play_sound(walking, 1, false);
@@ -112,9 +112,10 @@ audio_play_sound(walking, 1, false);
 }
 else
 audio_stop_sound(walking);
-
+*/
 if(global.hp &lt;=0){
 room_goto(rm_gameover);
+audio_stop_sound(wind_sound);
 }
 
 
@@ -219,7 +220,7 @@ var vspd = (keyboard_check(vk_down) - keyboard_check(vk_up))* global.spd  ;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//global.hp--;
+            <string>global.hp = global.hp - .1;
 </string>
           </argument>
         </arguments>
