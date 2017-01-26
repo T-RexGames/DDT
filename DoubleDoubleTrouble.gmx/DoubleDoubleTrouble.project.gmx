@@ -38,6 +38,7 @@
       <sprite>sprites\spr_moose</sprite>
     </sprites>
     <sprite>sprites\spr_Score</sprite>
+    <sprite>sprites\spr_tims</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -57,6 +58,9 @@
     <script>scripts\grid_place_meeting.gml</script>
     <script>scripts\get_path_to_player.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader0.shader</shader>
+  </shaders>
   <objects name="objects">
     <object>objects\Level</object>
     <object>objects\obj_Player</object>
@@ -70,6 +74,8 @@
     <object>objects\obj_snowflake1</object>
     <object>objects\obj_moose</object>
     <object>objects\obj_Score</object>
+    <object>objects\obj_timer</object>
+    <object>objects\obj_tims</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>

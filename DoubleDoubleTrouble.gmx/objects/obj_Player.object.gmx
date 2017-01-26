@@ -96,12 +96,38 @@ move(hspd, vspd);
 if(Level.grid[# x div CELL_WIDTH, y div CELL_HEIGHT] == ICE){
 global.spd = 20;
 }
-else{global.spd = 5;}
+else 
+{
+global.spd = 5;
+}
 
 if(global.hp &lt;=0){
 room_goto(rm_gameover);
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_tims">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.startTimer = true;
 </string>
           </argument>
         </arguments>
@@ -150,7 +176,7 @@ var vspd = (keyboard_check(vk_down) - keyboard_check(vk_up))* global.spd  ;
           <argument>
             <kind>1</kind>
             <string>
-global.hp--;
+//global.hp--;
 </string>
           </argument>
         </arguments>
