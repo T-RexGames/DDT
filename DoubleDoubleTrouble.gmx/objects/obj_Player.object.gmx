@@ -220,7 +220,7 @@ var vspd = (keyboard_check(vk_down) - keyboard_check(vk_up))* global.spd  ;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.hp = global.hp - .1;
+            <string>global.hp = global.hp - .3;
 </string>
           </argument>
         </arguments>
@@ -244,6 +244,8 @@ var vspd = (keyboard_check(vk_down) - keyboard_check(vk_up))* global.spd  ;
           <argument>
             <kind>1</kind>
             <string>instance_create(x, y, obj_puck);
+audio_play_sound(throw_sound, 1, false);
+audio_sound_gain(throw_sound, .1, 1);
 </string>
           </argument>
         </arguments>

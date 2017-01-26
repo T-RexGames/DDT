@@ -9,6 +9,8 @@
     <sound>sound\walking</sound>
     <sound>sound\wind_sound</sound>
     <sound>sound\game_over</sound>
+    <sound>sound\throw_sound</sound>
+    <sound>sound\hit_sound</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_puck</sprite>
@@ -45,6 +47,7 @@
     <sprite>sprites\spr_Score</sprite>
     <sprite>sprites\spr_tims</sprite>
     <sprite>sprites\spr_cabin</sprite>
+    <sprite>sprites\spr_CoffeeCup</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -86,6 +89,7 @@
     <object>objects\obj_start_music</object>
     <object>objects\obj_wind</object>
     <object>objects\obj_sound_game_over</object>
+    <object>objects\obj_Selector</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>
