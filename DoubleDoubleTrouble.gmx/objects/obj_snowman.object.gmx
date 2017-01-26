@@ -25,11 +25,44 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = y;
+            <string>//Get the spawn origin
+mySpawnLocation_x = x;
+mySpawnLocation_y = y;
+returningToSpawn = false;
 
+//Set other variables here.
+depth = y;
+myInitalSpeed = irandom_range(3,6);
+mySpeed = myInitalSpeed ;
+hitByPuck = false;
 path = path_add();
-
 alarm[0] = room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Done running from the moose.
+returningToSpawn = false;
+image_xscale = 1;
+image_yscale = 1;
 </string>
           </argument>
         </arguments>
@@ -53,9 +86,28 @@ alarm[0] = room_speed;
           <argument>
             <kind>1</kind>
             <string>/// move towards the player
-if(distance_to_object(obj_Player) &lt; view_xview[0] + 20){
-get_path_to_player();
+if (!returningToSpawn ){
+    if(distance_to_object(obj_Player) &lt; view_xview[0] + 20){
+       ///get path to player 
+        if(instance_exists(obj_Player)){
+            var xx = (obj_Player.x div CELL_WIDTH)*CELL_WIDTH+CELL_WIDTH/2;
+            var yy = (obj_Player.y div CELL_HEIGHT)*CELL_HEIGHT+CELL_HEIGHT/2;
+
+            if (hitByPuck){ 
+               // path_delete(path);
+                if(mp_grid_path(Level.grid_path, path, mySpawnLocation_x , mySpawnLocation_y, xx, yy, true)) {
+                    path_start(path, mySpeed, path_action_stop, false);
+                    }
+                hitByPuck = false;
+            } else {
+                if(mp_grid_path(Level.grid_path, path, x, y, xx, yy, true)) {
+                    path_start(path, mySpeed, path_action_stop, false);
+                    }
+            }
+        }
+    }
 }
+
 alarm[0] = room_speed;
 
 </string>
@@ -102,6 +154,38 @@ sprite_index = spr_snowman_down;
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_moose">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//return to SnowMan's origin
+if(mp_grid_path(Level.grid_path, path, x, y, mySpawnLocation_x, mySpawnLocation_y, true)) {
+    image_xscale = .5;
+    image_yscale = .5;
+    returningToSpawn = true;
+    path_start(path, 5, path_action_stop, false);
+    alarm[1] = room_speed * 4 ;
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_puck">
       <action>
         <libid>1</libid>
@@ -119,7 +203,12 @@ sprite_index = spr_snowman_down;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>//Get path to origin
+hitByPuck = true;
+path_end();
+x = mySpawnLocation_x;
+y = mySpawnLocation_y;
+
 </string>
           </argument>
         </arguments>
