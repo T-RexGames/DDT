@@ -137,8 +137,9 @@ for (var yy = 0; yy &lt; height; yy++) {
             //Place Cabin 
             if (!cabinPlaced){
                 if (irandom(20) == 1) {
-                    tile_add(bg_Cabin, 0, 0, CELL_WIDTH*2, CELL_HEIGHT*2, xx*CELL_WIDTH, yy*CELL_HEIGHT, -10);
-                    instance_create(xx*CELL_WIDTH+15, yy*CELL_HEIGHT+15, obj_Player); 
+                    //tile_add(bg_Cabin, 0, 0, CELL_WIDTH*2, CELL_HEIGHT*2, xx*CELL_WIDTH, yy*CELL_HEIGHT, -10);
+                    instance_create(xx*CELL_WIDTH, yy*CELL_HEIGHT, obj_cabin);
+                    instance_create(xx*CELL_WIDTH +2, yy*CELL_HEIGHT +24, obj_Player); 
                     cabinPlaced = true;
                  }
             }
@@ -307,7 +308,7 @@ ds_grid_destroy(Level.grid);
           <argument>
             <kind>1</kind>
             <string>/// Restart the room
-room_restart();
+//room_restart();
 </string>
           </argument>
         </arguments>

@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\main_screen_music</sound>
+    <sound>sound\walking</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_puck</sprite>
     <sprites name="Healthbar">
@@ -39,6 +42,7 @@
     </sprites>
     <sprite>sprites\spr_Score</sprite>
     <sprite>sprites\spr_tims</sprite>
+    <sprite>sprites\spr_cabin</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -76,6 +80,9 @@
     <object>objects\obj_Score</object>
     <object>objects\obj_timer</object>
     <object>objects\obj_tims</object>
+    <object>objects\obj_cabin</object>
+    <object>objects\GameWon</object>
+    <object>objects\obj_start_music</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>
