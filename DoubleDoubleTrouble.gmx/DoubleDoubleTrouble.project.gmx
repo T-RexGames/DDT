@@ -60,6 +60,8 @@
     <background>background\bg_Tims</background>
     <background>background\bg_ice</background>
     <background>background\bg_start_screen</background>
+    <background>background\bg_highscore</background>
+    <background>background\bg_winnerScreen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -95,6 +97,8 @@
     <room>rooms\rm_start_screen</room>
     <room>rooms\rm_level</room>
     <room>rooms\rm_gameover</room>
+    <room>rooms\rm_highscore</room>
+    <room>rooms\rm_winner</room>
   </rooms>
   <constants number="8">
     <constant name="MOOSE_SPEED">7</constant>

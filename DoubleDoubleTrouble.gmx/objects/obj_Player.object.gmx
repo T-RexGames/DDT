@@ -147,7 +147,7 @@ audio_stop_sound(wind_sound);
 {
 
 global.reachedCabin = true;
-room_goto(rm_gameover);
+room_goto(rm_winner);
 }
 
 </string>
