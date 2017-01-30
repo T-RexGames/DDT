@@ -127,7 +127,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.following = true
+            <string>audio_play_sound(moose_sound, 1, false);
+global.following = true
 get_path_to_player();
 alarm[0] = room_speed;
 

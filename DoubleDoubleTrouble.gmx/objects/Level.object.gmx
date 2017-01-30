@@ -73,13 +73,21 @@ var north = 0;
 var south = 2;
 var east = 1;
 var west = 3;
+var LastTileCreatedWas = "Floor";
+var Odds4Ice = 20;
 
 repeat (2500) {
     // Place a floor tile at the controller position
     grid[# cx, cy] = FLOOR;
-    
-    if(irandom(20)==2){
-     grid[# cx, cy] = ICE;
+   
+     
+    if(irandom(Odds4Ice)==1){
+      grid[# cx, cy] = ICE;
+      LastTileCreatedWas = "ICE";
+      Odds4Ice = 4;
+    } else{
+      LastTileCreatedWas = "Not-ICE";
+      Odds4Ice = 20;
     }
  
     // Randomize the direction of the controller
@@ -160,7 +168,6 @@ for (var yy = 0; yy &lt; height; yy++) {
         else if(grid[# xx, yy] == ICE){
         //show_debug_message("ICE");
             tile_add(bg_ice, 0, 0, CELL_WIDTH, CELL_HEIGHT, xx*CELL_WIDTH, yy*CELL_HEIGHT, -5);
-           
         }
       else {
         mp_grid_add_cell(grid_path, xx, yy);
@@ -215,7 +222,7 @@ for (var yy = 0; yy &lt; height; yy++) {
         if ((grid[# xx, yy] != WALL) &amp;&amp; (grid[# xx, yy] == FLOOR)) {
        
             //add some snowmen
-            var odds = 60;
+            var odds = 50;
             var ex = xx*CELL_WIDTH+CELL_WIDTH/2;
             var ey = yy*CELL_HEIGHT+CELL_HEIGHT/2;
             

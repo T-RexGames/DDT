@@ -28,6 +28,7 @@
             <string>var global.hp = 100;
 var global.spd = 3;
 var global.canmoveanywhere = false;
+var global.reachedTims = false;
 alarm[0] = 120;
 </string>
           </argument>
@@ -143,10 +144,9 @@ audio_stop_sound(wind_sound);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.startTimer = true)
+            <string>if(global.reachedTims = true)
 {
-
-global.reachedCabin = true;
+//global.reachedCabin = true;
 room_goto(rm_winner);
 }
 
@@ -172,7 +172,9 @@ room_goto(rm_winner);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.startTimer = true;
+            <string>//global.startTimer = true;
+global.reachedTims = true;
+global.myTime = 30.0;
 </string>
           </argument>
         </arguments>

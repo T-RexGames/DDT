@@ -11,6 +11,7 @@
     <sound>sound\game_over</sound>
     <sound>sound\throw_sound</sound>
     <sound>sound\hit_sound</sound>
+    <sound>sound\moose_sound</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_puck</sprite>
@@ -64,6 +65,7 @@
     <background>background\bg_start_screen</background>
     <background>background\bg_highscore</background>
     <background>background\bg_winnerScreen</background>
+    <background>background\bg_options</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -103,6 +105,7 @@
     <room>rooms\rm_gameover</room>
     <room>rooms\rm_highscore</room>
     <room>rooms\rm_winner</room>
+    <room>rooms\rm_options</room>
   </rooms>
   <constants number="8">
     <constant name="MOOSE_SPEED">7</constant>

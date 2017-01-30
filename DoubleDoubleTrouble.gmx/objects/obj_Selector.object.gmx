@@ -136,7 +136,7 @@ switch (position){
         room_goto(rm_highscore);
     break;
     case 3:
-        room_goto(rm_level);
+        room_goto(rm_options);
     break;
 }
 audio_stop_all();
