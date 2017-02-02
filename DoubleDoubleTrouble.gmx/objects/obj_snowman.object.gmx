@@ -174,6 +174,9 @@ sprite_index = spr_snowman_down;
           <argument>
             <kind>1</kind>
             <string>//return to SnowMan's origin
+
+sprite_index = spr_snowmanLoosingHead;
+
 if(mp_grid_path(Level.grid_path, path, x, y, mySpawnLocation_x, mySpawnLocation_y, true)) {
     image_xscale = .5;
     image_yscale = .5;

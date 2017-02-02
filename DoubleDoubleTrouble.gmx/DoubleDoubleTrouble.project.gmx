@@ -51,6 +51,8 @@
     <sprite>sprites\spr_CoffeeCup</sprite>
     <sprite>sprites\spr_endgameselector</sprite>
     <sprite>sprites\spr_highscoreback</sprite>
+    <sprite>sprites\spr_CoffeePouring</sprite>
+    <sprite>sprites\spr_snowmanLoosingHead</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -98,6 +100,7 @@
     <object>objects\obj_Selector</object>
     <object>objects\obj_end_gameClick</object>
     <object>objects\obj_highscoreback</object>
+    <object>objects\obj_CoffeePouring</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>
