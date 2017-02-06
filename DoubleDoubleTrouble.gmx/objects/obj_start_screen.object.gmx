@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>//Create variables here.
-global.highScore = 0;
+scr_load();
 global.points = 0;
+
 </string>
           </argument>
         </arguments>

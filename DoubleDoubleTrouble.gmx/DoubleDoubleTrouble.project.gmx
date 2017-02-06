@@ -76,12 +76,15 @@
     <script>scripts\move.gml</script>
     <script>scripts\grid_place_meeting.gml</script>
     <script>scripts\get_path_to_player.gml</script>
+    <script>scripts\scr_save.gml</script>
+    <script>scripts\scr_load.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\myfont</font>
+    <font>fonts\fnt_regular</font>
   </fonts>
   <objects name="objects">
     <object>objects\Level</object>

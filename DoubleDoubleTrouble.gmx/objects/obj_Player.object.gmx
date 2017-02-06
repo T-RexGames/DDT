@@ -116,6 +116,7 @@ audio_stop_sound(walking);
 */
 if(global.hp &lt;=0){
     audio_stop_sound(wind_sound);
+    
     //Keep track of high score.
     if (global.highScore &lt; global.points )
     {
@@ -155,8 +156,15 @@ if(global.hp &lt;=0){
             <kind>1</kind>
             <string>if(global.reachedTims = true)
 {
-//global.reachedCabin = true;
-room_goto(rm_winner);
+if (global.highScore &lt; global.points )
+    {
+        global.highScore = global.points ;
+        room_goto(rm_highscore);
+    }
+    else{
+        room_goto(rm_winner);
+    }
+
 }
 
 </string>

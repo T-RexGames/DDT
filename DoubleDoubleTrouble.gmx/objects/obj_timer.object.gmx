@@ -96,6 +96,7 @@ showTime=ceil(global.myTime);
 //draw_set_font(newfont);
 //if(global.startTimer = true){
 draw_set_color(c_blue);
+draw_set_font(fnt_regular);
 draw_text(view_xview[0], view_yview[0] + 165, "Time Left: " + string(showTime) );
 //}
 </string>

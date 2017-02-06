@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_colour(c_green);
+draw_set_font(fnt_regular);
 
 draw_text(view_xview[0] +230, view_yview[0] +4, "Score:");
 

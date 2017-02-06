@@ -28,6 +28,10 @@
             <string>draw_set_colour(c_yellow);
 draw_set_font(myfont)
 draw_text(240, 420, string(global.highScore));
+scr_save();
+
+
+
 
 </string>
           </argument>
