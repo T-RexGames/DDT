@@ -82,19 +82,24 @@ var vspd = (keyboard_check(vk_down) - keyboard_check(vk_up))* global.spd  ;
 //move
 if(hspd &lt; 0){
 sprite_index = spr_Player_Left;
-
+image_speed = 0.5;
 }
 else if(hspd &gt; 0){
 sprite_index = spr_Player_Right;
-
+image_speed = 0.5;
 }
 else if (vspd &lt; 0){
 sprite_index = spr_Player_Up;
+image_speed = 0.5;
 
 }
 else if(vspd &gt; 0){
 sprite_index = spr_Player_Down;
+image_speed = 0.5;
 
+}
+else{
+image_speed = 0;
 }
 move(hspd, vspd);
 
