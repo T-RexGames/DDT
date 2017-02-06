@@ -3,12 +3,12 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-2000</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="5" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,11 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_green);
-
-draw_text(view_xview[0] +230, view_yview[0] +4, "Score:");
-
-draw_text(view_xview[0] +290, view_yview[0]+5, global.points);
+            <string>room_goto(rm_level);
 </string>
           </argument>
         </arguments>

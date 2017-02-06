@@ -130,7 +130,7 @@ switch (position){
             <kind>1</kind>
             <string>switch (position){
     case 1:
-        room_goto(rm_level);
+        room_goto(rm_splashScreen);
     break;
     case 2:
         room_goto(rm_highscore);

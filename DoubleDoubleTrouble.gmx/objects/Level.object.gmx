@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create the level
+            <string>
+
+/// Create the level
 var xTemp = 0;
 var yTemp = 0;
 // Resize the room

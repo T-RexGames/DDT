@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-5000</depth>
+  <depth>-2000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,17 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//var global.startTimer = false
-
-global.myTime=90.0;
-showTime = global.myTime;
-
+            <string>alarm[0] = 100;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,24 +48,7 @@ showTime = global.myTime;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if(global.startTimer == true){
-if(global.myTime &gt; 0) {
-global.myTime=global.myTime-delta_time/1000000;
-}
-else{
-    global.myTime=0;
-    //Keep track of high score.
-    if (global.highScore &lt; global.points )
-    {
-        global.highScore  =  global.points ;
-        room_goto(rm_highscore);
-    }
-    else{
-        room_goto(rm_gameover);
-    }
-}
-showTime=ceil(global.myTime);
-//}
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -92,12 +71,10 @@ showTime=ceil(global.myTime);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//newfont = font_add( 'Arial', 24, true, true, 32, 128);
-//draw_set_font(newfont);
-//if(global.startTimer = true){
-draw_set_color(c_blue);
-draw_text(view_xview[0], view_yview[0] + 165, "Time Left: " + string(showTime) );
-//}
+            <string>draw_set_colour(c_blue);
+draw_text(view_xview[0], view_yview[0] +15,  
+"Make your way to tim hortons before 
+ the time runs out!");
 </string>
           </argument>
         </arguments>

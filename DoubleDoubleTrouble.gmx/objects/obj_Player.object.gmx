@@ -115,8 +115,17 @@ else
 audio_stop_sound(walking);
 */
 if(global.hp &lt;=0){
-room_goto(rm_gameover);
-audio_stop_sound(wind_sound);
+    audio_stop_sound(wind_sound);
+    //Keep track of high score.
+    if (global.highScore &lt; global.points )
+    {
+        global.highScore = global.points ;
+        room_goto(rm_highscore);
+    }
+    else{
+        room_goto(rm_gameover);
+    }
+
 }
 
 
@@ -175,8 +184,16 @@ room_goto(rm_winner);
             <string>//global.startTimer = true;
 global.reachedTims = true;
 global.myTime = 30.0;
-instance_create( view_xview[0] + view_wview[0] * 0.5 ,view_yview[0] + view_hview[0] * 0.5, obj_CoffeePouring);
 
+if (!instance_exists(obj_CoffeePouring)){
+    instance_create( view_xview[0] + view_wview[0] * 0.8 ,view_yview[0] + view_hview[0] * 0.8, obj_CoffeePouring);
+}
+
+if(!instance_exists(obj_hittimstext))
+{
+    instance_create(view_xview[0], view_yview[0] + 15, obj_hittimstext);
+
+}
 
 
 </string>

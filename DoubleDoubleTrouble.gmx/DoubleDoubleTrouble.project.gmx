@@ -53,6 +53,7 @@
     <sprite>sprites\spr_highscoreback</sprite>
     <sprite>sprites\spr_CoffeePouring</sprite>
     <sprite>sprites\spr_snowmanLoosingHead</sprite>
+    <sprite>sprites\spr_SplashScreen</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -68,6 +69,7 @@
     <background>background\bg_highscore</background>
     <background>background\bg_winnerScreen</background>
     <background>background\bg_options</background>
+    <background>background\bg_SplashScreen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -78,6 +80,9 @@
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
+  <fonts name="fonts">
+    <font>fonts\myfont</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Level</object>
     <object>objects\obj_Player</object>
@@ -101,9 +106,16 @@
     <object>objects\obj_end_gameClick</object>
     <object>objects\obj_highscoreback</object>
     <object>objects\obj_CoffeePouring</object>
+    <object>objects\obj_gamestarttext</object>
+    <object>objects\obj_hittimstext</object>
+    <object>objects\obj_gotoGameOver</object>
+    <object>objects\obj_highscore</object>
+    <object>objects\obj_start_screen</object>
+    <object>objects\obj_SplashScreen</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start_screen</room>
+    <room>rooms\rm_splashScreen</room>
     <room>rooms\rm_level</room>
     <room>rooms\rm_gameover</room>
     <room>rooms\rm_highscore</room>
