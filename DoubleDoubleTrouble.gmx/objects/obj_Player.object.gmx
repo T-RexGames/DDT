@@ -129,6 +129,7 @@ if(global.hp &lt;=0){
         room_goto(rm_highscore);
     }
     else{
+        
         room_goto(rm_gameover);
     }
 

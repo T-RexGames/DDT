@@ -4,10 +4,16 @@ var vspd = argument[1];
 
 //Horizontal collisions
 if (grid_place_meeting(x+hspd,y)){
-    while (!grid_place_meeting(x+sign(hspd), y)){
-        x += sign(hspd);
+    while (!grid_place_meeting(x+hspd, y)){
+        x += hspd;
     }
+     
     hspd = 0;
+   
+}
+else
+{
+x=xprevious;
 }
 
 //move horizontaly.

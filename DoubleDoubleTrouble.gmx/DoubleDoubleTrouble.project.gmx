@@ -61,6 +61,7 @@
     <sprite>sprites\spr_dinoHappyFeet</sprite>
     <sprite>sprites\spr_TRexText</sprite>
     <sprite>sprites\spr_snowman_impact</sprite>
+    <sprite>sprites\spr_credits</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -131,15 +132,21 @@
     <object>objects\obj_TRexText</object>
     <object>objects\obj_TRextText_FaintBig</object>
     <object>objects\obj_snowman_impact</object>
+    <object>objects\obj_exit</object>
+    <object>objects\obj_pressf5</object>
+    <object>objects\obj_credits</object>
+    <object>objects\obj_gotocredits</object>
+    <object>objects\obj_anykey</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Dino</room>
     <room>rooms\rm_start_screen</room>
     <room>rooms\rm_splashScreen</room>
     <room>rooms\rm_level</room>
-    <room>rooms\rm_gameover</room>
-    <room>rooms\rm_highscore</room>
     <room>rooms\rm_winner</room>
+    <room>rooms\rm_gameover</room>
+    <room>rooms\rm_credits</room>
+    <room>rooms\rm_highscore</room>
     <room>rooms\rm_options</room>
   </rooms>
   <constants number="8">

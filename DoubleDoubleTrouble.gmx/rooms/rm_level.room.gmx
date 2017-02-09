@@ -58,6 +58,7 @@
     <instance objName="obj_timer" x="272" y="32" name="inst_43C536FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wind" x="352" y="32" name="inst_D12BCDD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gamestarttext" x="416" y="32" name="inst_6C5CEE14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_exit" x="272" y="80" name="inst_08BAC103" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

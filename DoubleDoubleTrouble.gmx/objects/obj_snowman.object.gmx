@@ -203,7 +203,7 @@ sprite_index = spr_snowman_down;
             <kind>1</kind>
             <string>//return to SnowMan's origin
 
-sprite_index = spr_snowmanLoosingHead;
+//sprite_index = spr_snowmanLoosingHead;
 
 instance_create(x,y, obj_snowman_impact);
 
