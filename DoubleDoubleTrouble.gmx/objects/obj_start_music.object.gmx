@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(main_screen_music, 1, 2);
+            <string>if (global.isMusicOn){
+    if (!sound_isplaying(main_screen_music)){
+        audio_play_sound(main_screen_music, 1, 2);
+    }
+} else {
+    if (sound_isplaying(main_screen_music)){
+        sound_stop(main_screen_music);
+    }
+}
 
 </string>
           </argument>

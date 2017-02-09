@@ -33,6 +33,30 @@ returningToSpawn = false;
 //Set other variables here.
 depth = y;
 myInitalSpeed = irandom_range(3,6);
+
+switch (myInitalSpeed){
+    case 3:
+        myXScaleModifer = .7;
+        myYScaleModifer = .7; 
+        break;
+    case 4:
+        myXScaleModifer = .8;
+        myYScaleModifer = .8;
+        break;
+    case 5:
+        myXScaleModifer = 1;
+        myYScaleModifer = 1;
+        break;
+    case 6:
+        myXScaleModifer = 1.2;
+        myYScaleModifer = 1.2;
+        break;
+}
+
+
+image_xscale = 1 * myXScaleModifer ;
+image_yscale = 1 * myYScaleModifer;
+
 mySpeed = myInitalSpeed ;
 hitByPuck = false;
 path = path_add();
@@ -61,8 +85,9 @@ alarm[0] = room_speed;
             <kind>1</kind>
             <string>///Done running from the moose.
 returningToSpawn = false;
-image_xscale = 1;
-image_yscale = 1;
+image_xscale = 1 * myXScaleModifer ;
+image_yscale = 1 * myYScaleModifer;
+
 </string>
           </argument>
         </arguments>
@@ -85,7 +110,10 @@ image_yscale = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// move towards the player
+            <string>/// move towards the player and make visible again
+
+image_alpha = 1;
+
 if (!returningToSpawn ){
     if(distance_to_object(obj_Player) &lt; view_hview[0] + 20){
        ///get path to player 
@@ -177,6 +205,8 @@ sprite_index = spr_snowman_down;
 
 sprite_index = spr_snowmanLoosingHead;
 
+instance_create(x,y, obj_snowman_impact);
+
 if(mp_grid_path(Level.grid_path, path, x, y, mySpawnLocation_x, mySpawnLocation_y, true)) {
     image_xscale = .5;
     image_yscale = .5;
@@ -208,11 +238,15 @@ if(mp_grid_path(Level.grid_path, path, x, y, mySpawnLocation_x, mySpawnLocation_
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Get path to origin
+            <string>///Get path to origin and show hit animation.
+
+instance_create(x,y, obj_snowman_impact);
+
 hitByPuck = true;
 path_end();
 x = mySpawnLocation_x;
 y = mySpawnLocation_y;
+image_alpha = 0;
 
 //mySpeed = 1;
 alarm[0] = 80;

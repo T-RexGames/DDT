@@ -26,6 +26,33 @@
           <argument>
             <kind>1</kind>
             <string>//set height
+
+randomize()
+
+switch (irandom(6)){
+    case 0:
+        sprite_index = spr_snowFlake1;
+        break;
+    case 1:
+        sprite_index = spr_snowFlake2;
+        break;
+    case 2:
+        sprite_index = spr_snowFlake3;
+        break;
+    case 3:
+        sprite_index = spr_snowFlake4;
+        break;
+    case 4:
+        sprite_index = spr_snowFlake5;
+        break;
+    case 5:
+        sprite_index = spr_snowFlake6;
+        break;
+    case 6:
+        break;
+}
+
+
 height = 40;
 draw_set_alpha(.2);
 image_xscale = .3;

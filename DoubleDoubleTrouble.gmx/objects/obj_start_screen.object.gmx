@@ -29,6 +29,7 @@
 scr_load();
 global.points = 0;
 
+
 </string>
           </argument>
         </arguments>

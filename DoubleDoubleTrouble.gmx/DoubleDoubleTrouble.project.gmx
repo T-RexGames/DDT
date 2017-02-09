@@ -6,12 +6,13 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\main_screen_music</sound>
-    <sound>sound\walking</sound>
     <sound>sound\wind_sound</sound>
     <sound>sound\game_over</sound>
     <sound>sound\throw_sound</sound>
     <sound>sound\hit_sound</sound>
     <sound>sound\moose_sound</sound>
+    <sound>sound\dinoIntro</sound>
+    <sound>sound\dinoDrinkingCoffeeHaHa</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_puck</sprite>
@@ -54,6 +55,12 @@
     <sprite>sprites\spr_CoffeePouring</sprite>
     <sprite>sprites\spr_snowmanLoosingHead</sprite>
     <sprite>sprites\spr_SplashScreen</sprite>
+    <sprite>sprites\spr_off</sprite>
+    <sprite>sprites\test</sprite>
+    <sprite>sprites\spr_dinoDrinkingCoffeeShort</sprite>
+    <sprite>sprites\spr_dinoHappyFeet</sprite>
+    <sprite>sprites\spr_TRexText</sprite>
+    <sprite>sprites\spr_snowman_impact</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_wall</background>
@@ -115,8 +122,18 @@
     <object>objects\obj_highscore</object>
     <object>objects\obj_start_screen</object>
     <object>objects\obj_SplashScreen</object>
+    <object>objects\obj_SoundOffNo</object>
+    <object>objects\obj_MusicOffOn</object>
+    <object>objects\object30</object>
+    <object>objects\obj_rmDino</object>
+    <object>objects\obj_DinoDrinkingCoffeeShort</object>
+    <object>objects\obj_DinoHappyFeet</object>
+    <object>objects\obj_TRexText</object>
+    <object>objects\obj_TRextText_FaintBig</object>
+    <object>objects\obj_snowman_impact</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_Dino</room>
     <room>rooms\rm_start_screen</room>
     <room>rooms\rm_splashScreen</room>
     <room>rooms\rm_level</room>
